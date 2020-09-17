@@ -11,7 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimelineView" customModule="vk_podcast" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="iFv-vC-5W0" id="TGJ-hQ-FdT"/>
-                <outlet property="contentView" destination="PM5-FP-xNJ" id="fgG-Hy-J5a"/>
+                <outlet property="contentView" destination="crh-7c-Uo2" id="2G6-2f-Zru"/>
+                <outlet property="playButton" destination="mch-3y-YL4" id="b6Q-sY-Ayl"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -38,6 +39,9 @@
                                                         <constraint firstAttribute="width" constant="44" id="dsP-gG-Sfo"/>
                                                     </constraints>
                                                     <state key="normal" image="play"/>
+                                                    <connections>
+                                                        <action selector="onDidPlayTapped:" destination="-1" eventType="touchUpInside" id="XeB-WB-v8Q"/>
+                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGs-QI-Qrc">
                                                     <rect key="frame" x="48" y="0.0" width="16" height="44"/>
@@ -113,7 +117,21 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PM5-FP-xNJ">
                             <rect key="frame" x="0.0" y="0.0" width="340" height="132"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crh-7c-Uo2">
+                                    <rect key="frame" x="0.0" y="36" width="340" height="96"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="96" id="5sS-A9-Klx"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.9498776793" green="0.95326846840000001" blue="0.95943111179999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="crh-7c-Uo2" firstAttribute="leading" secondItem="PM5-FP-xNJ" secondAttribute="leading" id="88z-ja-HX6"/>
+                                <constraint firstAttribute="trailing" secondItem="crh-7c-Uo2" secondAttribute="trailing" id="rg9-Jl-jZD"/>
+                                <constraint firstAttribute="bottom" secondItem="crh-7c-Uo2" secondAttribute="bottom" id="wmM-gv-7M8"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

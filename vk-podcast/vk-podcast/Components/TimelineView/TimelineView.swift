@@ -11,6 +11,10 @@ import SCWaveformView
 
 class TimelineView: NibView {
 
+    var onDidError: ((String)->Void)?
+    
+    var avPlayer: AVAudioPlayer!
+    var scrollableWaveformView: SCScrollableWaveformView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var containerView: UIView! {
         didSet {
@@ -20,49 +24,50 @@ class TimelineView: NibView {
             self.containerView.layer.borderColor = Pallete.textfieldBorderColor.cgColor
         }
     }
+    @IBOutlet weak var playButton: EditControlButton!
 
     func setupAudio(url: URL) {
         
-        var scroll = SCScrollableWaveformView.init(frame: CGRect.init(x: 0, y: 0, width: 300, height: 140))
-        let waveform = SCWaveformView.init()
-        let asset = AVAsset(url: url)
-        scroll.waveformView.asset = asset
-        scroll.waveformView.precision = 0.25; // We are going to render one line per four pixels
+        do {
+            self.avPlayer = try AVAudioPlayer(contentsOf: url)
+        } catch {
+            self.onDidError?("Проблема с загрузкой файла")
+            return
+        }
 
-        scroll.waveformView.normalColor = .green
-        scroll.waveformView.progressColor = Pallete.main
+        self.scrollableWaveformView = SCScrollableWaveformView(frame: CGRect.init(x: 0, y: 0, width: self.contentView.frame.width + 20, height: self.contentView.frame.height - 20))
+        let asset = AVAsset(url: url)
+        scrollableWaveformView.waveformView.asset = asset
+        scrollableWaveformView.waveformView.precision = 0.25; // We are going to render one line per four pixels
+
+        scrollableWaveformView.waveformView.normalColor = Pallete.main
+        scrollableWaveformView.waveformView.progressColor = Pallete.main
 
         // Set the play progress
-        scroll.waveformView.progressTime = CMTimeMakeWithSeconds(5, preferredTimescale: 10000)
+        scrollableWaveformView.waveformView.progressTime = CMTimeMakeWithSeconds(1, preferredTimescale: 10000)
 
         // Show only the first second of your asset
-        scroll.waveformView.timeRange = CMTimeRangeMake(start: CMTime.zero, duration: CMTimeMakeWithSeconds(1, preferredTimescale: 1))
+        let duration = CMTime(seconds: self.avPlayer.duration, preferredTimescale: 1000000)
+        scrollableWaveformView.waveformView.timeRange = CMTimeRangeMake(start: CMTime.zero, duration: duration)
         // Set the lineWidth so we have some space between the lines
-        scroll.waveformView.lineWidthRatio = 2;
+        scrollableWaveformView.waveformView.lineWidthRatio = 0.5;
 
         // Show stereo if available
-        scroll.waveformView.channelStartIndex = 0;
-        scroll.waveformView.channelEndIndex = 0;
-
-        // Show only right channel
-//        waveform.channelStartIndex = 1;
-//        waveform.channelEndIndex = 1;
-
-        // Add some padding between the channels
-//        waveform.channelsPadding = 10;
-//        waveform.backgroundColor = .cyan
-//        scroll.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.addSubview(scroll)
-        
-//        let constraints = [self.contentView.leadingAnchor.constraint(equalTo: scroll.waveformView.leadingAnchor),
-//                           self.contentView.trailingAnchor.constraint(equalTo: scroll.waveformView.trailingAnchor),
-//                           self.contentView.topAnchor.constraint(equalTo: scroll.waveformView.topAnchor),
-//                           self.contentView.bottomAnchor.constraint(equalTo: scroll.waveformView.bottomAnchor)]
-//        NSLayoutConstraint.activate(constraints)
-        //
-        // Get the audio data from the audio file
-        //
+        scrollableWaveformView.waveformView.channelStartIndex = 0;
+        scrollableWaveformView.waveformView.channelEndIndex = 0;
+        self.contentView.addSubview(scrollableWaveformView)
     }
+    
+    @IBAction func onDidPlayTapped(_ sender: Any) {
+        if self.avPlayer.isPlaying {
+            self.avPlayer.stop()
+            self.playButton.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+        } else {
+            self.avPlayer.play()
+            self.playButton.setImage(#imageLiteral(resourceName: "stop"), for: .normal)
+        }
+    }
+    
     
     /*
     // Only override draw() if you perform custom drawing.

@@ -58,6 +58,7 @@ class NewPodcastController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        hideKeyboardWhenTappedAround()
         setupUI()
         // Do any additional setup after loading the view.
     }
@@ -75,7 +76,9 @@ class NewPodcastController: UIViewController {
         }
         
         self.podcastView.didUploadAction = {
-            
+            DispatchQueue.main.async {
+                self.showDocumentController()
+            }
         }
         self.podcastView.didEditAction = {
             DispatchQueue.main.async {
@@ -104,7 +107,7 @@ class NewPodcastController: UIViewController {
         let info = self.prepareAudioInfo(url: url)
         self.podcastView.setup(title: info.0, duration: info.1)
         
-        UIView.animate(withDuration: 0.2, animations: {
+        UIView.animate(withDuration: 0.1, animations: {
             self.uploadView.alpha = 0
         }) { (complete) in
             self.uploadView.isHidden = true
@@ -172,13 +175,13 @@ extension NewPodcastController {
             UIView.animate(withDuration: 0.2, animations: {
                 self.view.layoutIfNeeded()
             }) { (success) in
-                self.scrollView.contentOffset = CGPoint(x: self.scrollView.contentOffset.x,
-                                                        y: self.scrollView.contentOffset.y + 20)
+//                self.scrollView.contentOffset = CGPoint(x: self.scrollView.contentOffset.x,
+//                                                        y: self.scrollView.contentOffset.y + 20)
             }
         }
         
         let willHideObserver = center.addObserver(with: UIViewController.keyboardWillHide) { payload in
-            self.bottomConstraint.constant = 0
+            self.bottomConstraint.constant = 8
             UIView.animate(withDuration: 0.2, animations: { self.view.layoutIfNeeded() })
         }
         

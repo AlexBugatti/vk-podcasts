@@ -54,6 +54,9 @@ class EditPodcastController: UIViewController {
         timeline.translatesAutoresizingMaskIntoConstraints = false
         timeline.heightAnchor.constraint(equalToConstant: 192).isActive = true
         timeline.setupAudio(url: self.url!)
+        timeline.onDidError = { errorString in
+            self.navigationController?.popViewController(animated: true)
+        }
         
         self.stackView.addArrangedSubview(timeline)
         self.stackView.addArrangedSubview(self.timecodeLabel)

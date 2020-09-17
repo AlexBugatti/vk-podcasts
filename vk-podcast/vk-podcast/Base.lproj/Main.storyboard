@@ -95,16 +95,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgT-Zh-MGX" customClass="MainButton" customModule="vk_podcast" customModuleProvider="target">
-                                <rect key="frame" x="12" y="806" width="390" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="qga-Oz-vtB"/>
-                                </constraints>
-                                <state key="normal" title="Далее"/>
-                                <connections>
-                                    <action selector="onDidNextTapped:" destination="ot9-zu-3JX" eventType="touchUpInside" id="JNB-zY-ID5"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cgK-bh-Qqw">
                                 <rect key="frame" x="0.0" y="112" width="414" height="647"/>
                                 <subviews>
@@ -135,23 +125,45 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="S6B-rD-fUQ"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="B3p-fb-Qfj"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-Yu-how">
+                                <rect key="frame" x="0.0" y="794" width="414" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgT-Zh-MGX" customClass="MainButton" customModule="vk_podcast" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="12" width="390" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="qga-Oz-vtB"/>
+                                        </constraints>
+                                        <state key="normal" title="Далее"/>
+                                        <connections>
+                                            <action selector="onDidNextTapped:" destination="ot9-zu-3JX" eventType="touchUpInside" id="JNB-zY-ID5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LgT-Zh-MGX" secondAttribute="trailing" constant="12" id="UYx-qd-NAV"/>
+                                    <constraint firstAttribute="height" constant="68" id="jhd-ck-Pc8"/>
+                                    <constraint firstItem="LgT-Zh-MGX" firstAttribute="leading" secondItem="EmB-Yu-how" secondAttribute="leading" constant="12" id="l0l-td-izR"/>
+                                    <constraint firstItem="LgT-Zh-MGX" firstAttribute="centerY" secondItem="EmB-Yu-how" secondAttribute="centerY" id="zIf-fB-qm2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="cgK-bh-Qqw" firstAttribute="trailing" secondItem="3hD-al-czD" secondAttribute="trailing" id="9bX-zV-44u"/>
-                            <constraint firstItem="3hD-al-czD" firstAttribute="bottom" secondItem="LgT-Zh-MGX" secondAttribute="bottom" constant="12" id="HaB-FT-jjg"/>
-                            <constraint firstItem="3hD-al-czD" firstAttribute="trailing" secondItem="LgT-Zh-MGX" secondAttribute="trailing" constant="12" id="MHP-mf-Dwo"/>
+                            <constraint firstItem="EmB-Yu-how" firstAttribute="trailing" secondItem="3hD-al-czD" secondAttribute="trailing" id="D0i-nD-HMO"/>
+                            <constraint firstItem="EmB-Yu-how" firstAttribute="top" secondItem="cgK-bh-Qqw" secondAttribute="bottom" id="JM8-d4-7HX"/>
                             <constraint firstItem="cgK-bh-Qqw" firstAttribute="top" secondItem="3hD-al-czD" secondAttribute="top" id="NeA-Z4-sP5"/>
+                            <constraint firstItem="EmB-Yu-how" firstAttribute="bottom" secondItem="3hD-al-czD" secondAttribute="bottom" id="Yss-FK-68C"/>
+                            <constraint firstItem="EmB-Yu-how" firstAttribute="leading" secondItem="3hD-al-czD" secondAttribute="leading" id="dfa-D0-xUz"/>
                             <constraint firstItem="cgK-bh-Qqw" firstAttribute="leading" secondItem="3hD-al-czD" secondAttribute="leading" id="lYZ-4Y-KNq"/>
                             <constraint firstItem="sF5-q8-K3O" firstAttribute="width" secondItem="qCz-nC-FU0" secondAttribute="width" id="p9D-RZ-mwD"/>
-                            <constraint firstItem="LgT-Zh-MGX" firstAttribute="leading" secondItem="3hD-al-czD" secondAttribute="leading" constant="12" id="wen-Iy-CFr"/>
-                            <constraint firstItem="LgT-Zh-MGX" firstAttribute="top" secondItem="cgK-bh-Qqw" secondAttribute="bottom" constant="8" symbolic="YES" id="wrx-8T-yFu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3hD-al-czD"/>
                     </view>
                     <navigationItem key="navigationItem" id="yLB-aL-KbS"/>
                     <connections>
-                        <outlet property="bottomConstraint" destination="HaB-FT-jjg" id="59y-X0-wda"/>
+                        <outlet property="bottomConstraint" destination="Yss-FK-68C" id="Dd0-Dk-cRu"/>
                         <outlet property="scrollView" destination="cgK-bh-Qqw" id="xsX-mZ-dY7"/>
                         <outlet property="stackView" destination="UtL-3l-ArA" id="jEN-3T-DXx"/>
                         <segue destination="5PH-M9-tST" kind="show" identifier="toEdit" id="v5L-mo-JGC"/>
@@ -160,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJ3-fk-20f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="110"/>
+            <point key="canvasLocation" x="1818.840579710145" y="109.82142857142857"/>
         </scene>
         <!--Prepare Podcast Controller-->
         <scene sceneID="G5l-K5-OAm">
