@@ -14,6 +14,7 @@ class EditPodcastController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
+    var timeline: TimelineView!
     
     private lazy var addTimecodeButton: AddTimecodeView = {
         var view = AddTimecodeView()
@@ -41,6 +42,12 @@ class EditPodcastController: UIViewController {
         return label
     }()
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.timeline?.avPlayer?.stop()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,7 +57,7 @@ class EditPodcastController: UIViewController {
     }
     
     func setupUI() {
-        let timeline = TimelineView()
+        self.timeline = TimelineView()
         timeline.translatesAutoresizingMaskIntoConstraints = false
         timeline.heightAnchor.constraint(equalToConstant: 192).isActive = true
         timeline.setupAudio(url: self.url!)
