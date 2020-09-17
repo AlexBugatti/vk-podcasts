@@ -1,0 +1,841 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7FE2C11F94587F883236E895 /* Pods_vk_podcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABFC66D38B78374C7C28106 /* Pods_vk_podcast.framework */; };
+		FAB2F79C2512B334009746DC /* EditPodcastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F79B2512B334009746DC /* EditPodcastController.swift */; };
+		FAB2F79F2512C80E009746DC /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F79E2512C80E009746DC /* TimelineView.swift */; };
+		FAB2F7A12512C81E009746DC /* TimelineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB2F7A02512C81E009746DC /* TimelineView.xib */; };
+		FAB2F7A32512C9E5009746DC /* EditControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F7A22512C9E5009746DC /* EditControlButton.swift */; };
+		FAB2F7A62512D22F009746DC /* InputTimecodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F7A52512D22F009746DC /* InputTimecodeView.swift */; };
+		FAB2F7A82512D23E009746DC /* InputTimecodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB2F7A72512D23E009746DC /* InputTimecodeView.xib */; };
+		FAB2F7AB2512D45B009746DC /* AddTimecodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F7AA2512D45B009746DC /* AddTimecodeView.swift */; };
+		FAB2F7AD2512D47C009746DC /* AddTimecodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB2F7AC2512D47B009746DC /* AddTimecodeView.xib */; };
+		FAB2F7B02512DE0D009746DC /* PreparePodcastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F7AF2512DE0D009746DC /* PreparePodcastController.swift */; };
+		FAB2F7B42512E3FA009746DC /* PreviewTitlePodcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F7B32512E3FA009746DC /* PreviewTitlePodcastView.swift */; };
+		FAB2F7B62512E40F009746DC /* PreviewTitlePodcastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB2F7B52512E40F009746DC /* PreviewTitlePodcastView.xib */; };
+		FAB2F7B82512E682009746DC /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F7B72512E682009746DC /* TitleTextView.swift */; };
+		FAB2F7BA2512E693009746DC /* TitleTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB2F7B92512E693009746DC /* TitleTextView.xib */; };
+		FAB2F7BD2512E999009746DC /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F7BC2512E998009746DC /* Podcast.swift */; };
+		FAB2F7C02512EB56009746DC /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F7BF2512EB55009746DC /* MainTextField.swift */; };
+		FAB2F7C22512EB68009746DC /* MainTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB2F7C12512EB68009746DC /* MainTextField.xib */; };
+		FAB2F7C42512F9E0009746DC /* Extension+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F7C32512F9E0009746DC /* Extension+Int.swift */; };
+		FAD98300251266BA00565927 /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD982FE251266BA00565927 /* Pallete.swift */; };
+		FAD98301251266BA00565927 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD982FF251266BA00565927 /* Constants.swift */; };
+		FAD9830425126A0100565927 /* NewPodcastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9830325126A0000565927 /* NewPodcastController.swift */; };
+		FAD983072512750C00565927 /* InputPodcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD983062512750C00565927 /* InputPodcastView.swift */; };
+		FAD983092512753300565927 /* InputPodcastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD983082512753300565927 /* InputPodcastView.xib */; };
+		FAD9830D25127DE000565927 /* UploadPodcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9830C25127DE000565927 /* UploadPodcastView.swift */; };
+		FAD9830F25127DEE00565927 /* UploadPodcastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD9830E25127DEE00565927 /* UploadPodcastView.xib */; };
+		FAD98311251284BB00565927 /* WhiteMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD98310251284BB00565927 /* WhiteMainButton.swift */; };
+		FAD983152512879F00565927 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD983142512879F00565927 /* CheckboxView.swift */; };
+		FAD98317251287B000565927 /* CheckboxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD98316251287B000565927 /* CheckboxView.xib */; };
+		FAD98319251289E900565927 /* CheckboxPodcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD98318251289E900565927 /* CheckboxPodcastView.swift */; };
+		FAD9831B251289F900565927 /* CheckboxPodcastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD9831A251289F900565927 /* CheckboxPodcastView.xib */; };
+		FAD9831E2512922100565927 /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9831D2512922100565927 /* SelectorView.swift */; };
+		FAD983202512923200565927 /* SelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD9831F2512923200565927 /* SelectorView.xib */; };
+		FAD983232512986300565927 /* PodcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD983222512986300565927 /* PodcastView.swift */; };
+		FAD983252512987E00565927 /* PodcastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD983242512987E00565927 /* PodcastView.xib */; };
+		FAF428F025123FAC00662FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF428EF25123FAC00662FD3 /* AppDelegate.swift */; };
+		FAF428F425123FAC00662FD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF428F325123FAC00662FD3 /* ViewController.swift */; };
+		FAF428F725123FAC00662FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF428F525123FAC00662FD3 /* Main.storyboard */; };
+		FAF428F925123FB100662FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF428F825123FB100662FD3 /* Assets.xcassets */; };
+		FAF428FC25123FB100662FD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF428FA25123FB100662FD3 /* LaunchScreen.storyboard */; };
+		FAF42906251241BF00662FD3 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF42905251241BF00662FD3 /* MainController.swift */; };
+		FAF4290E2512422600662FD3 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF429082512422600662FD3 /* Extension+UIViewController.swift */; };
+		FAF4290F2512422600662FD3 /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF429092512422600662FD3 /* Extension+Font.swift */; };
+		FAF429102512422600662FD3 /* Extension+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4290A2512422600662FD3 /* Extension+NavigationBar.swift */; };
+		FAF429112512422600662FD3 /* Extension_Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4290B2512422600662FD3 /* Extension_Storyboard.swift */; };
+		FAF429122512422600662FD3 /* Extension+KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4290C2512422600662FD3 /* Extension+KeyboardObserver.swift */; };
+		FAF429132512422600662FD3 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4290D2512422600662FD3 /* Extension+UIView.swift */; };
+		FAF4291C2512425800662FD3 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF429172512425800662FD3 /* SFProDisplay-Medium.ttf */; };
+		FAF4291D2512425800662FD3 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF429182512425800662FD3 /* SFProDisplay-Regular.ttf */; };
+		FAF4291E2512425800662FD3 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF429192512425800662FD3 /* SFProDisplay-Semibold.ttf */; };
+		FAF4291F2512425800662FD3 /* TT Commons DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAF4291A2512425800662FD3 /* TT Commons DemiBold.otf */; };
+		FAF429202512425800662FD3 /* TTCommons-DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF4291B2512425800662FD3 /* TTCommons-DemiBold.ttf */; };
+		FAF42930251242CD00662FD3 /* MainTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF42923251242CD00662FD3 /* MainTextView.xib */; };
+		FAF42931251242CD00662FD3 /* MainTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF42924251242CD00662FD3 /* MainTextView.swift */; };
+		FAF42932251242CD00662FD3 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF42926251242CD00662FD3 /* MainButton.swift */; };
+		FAF42935251242CD00662FD3 /* LabelFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF4292B251242CD00662FD3 /* LabelFieldView.xib */; };
+		FAF42936251242CD00662FD3 /* LabelFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4292C251242CD00662FD3 /* LabelFieldView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B78A0D0D7C8032AE1433CBE /* Pods-vk-podcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vk-podcast.release.xcconfig"; path = "Target Support Files/Pods-vk-podcast/Pods-vk-podcast.release.xcconfig"; sourceTree = "<group>"; };
+		C179904FF000A70731A425C9 /* Pods-vk-podcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vk-podcast.debug.xcconfig"; path = "Target Support Files/Pods-vk-podcast/Pods-vk-podcast.debug.xcconfig"; sourceTree = "<group>"; };
+		DABFC66D38B78374C7C28106 /* Pods_vk_podcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vk_podcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB2F79B2512B334009746DC /* EditPodcastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPodcastController.swift; sourceTree = "<group>"; };
+		FAB2F79E2512C80E009746DC /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		FAB2F7A02512C81E009746DC /* TimelineView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineView.xib; sourceTree = "<group>"; };
+		FAB2F7A22512C9E5009746DC /* EditControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditControlButton.swift; sourceTree = "<group>"; };
+		FAB2F7A52512D22F009746DC /* InputTimecodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTimecodeView.swift; sourceTree = "<group>"; };
+		FAB2F7A72512D23E009746DC /* InputTimecodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTimecodeView.xib; sourceTree = "<group>"; };
+		FAB2F7AA2512D45B009746DC /* AddTimecodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimecodeView.swift; sourceTree = "<group>"; };
+		FAB2F7AC2512D47B009746DC /* AddTimecodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTimecodeView.xib; sourceTree = "<group>"; };
+		FAB2F7AF2512DE0D009746DC /* PreparePodcastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparePodcastController.swift; sourceTree = "<group>"; };
+		FAB2F7B32512E3FA009746DC /* PreviewTitlePodcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTitlePodcastView.swift; sourceTree = "<group>"; };
+		FAB2F7B52512E40F009746DC /* PreviewTitlePodcastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewTitlePodcastView.xib; sourceTree = "<group>"; };
+		FAB2F7B72512E682009746DC /* TitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
+		FAB2F7B92512E693009746DC /* TitleTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTextView.xib; sourceTree = "<group>"; };
+		FAB2F7BC2512E998009746DC /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		FAB2F7BF2512EB55009746DC /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
+		FAB2F7C12512EB68009746DC /* MainTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTextField.xib; sourceTree = "<group>"; };
+		FAB2F7C32512F9E0009746DC /* Extension+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Int.swift"; sourceTree = "<group>"; };
+		FAB2F7C525130D5D009746DC /* vk-podcast-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vk-podcast-Bridging-Header.h"; sourceTree = "<group>"; };
+		FAD982FE251266BA00565927 /* Pallete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
+		FAD982FF251266BA00565927 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FAD9830325126A0000565927 /* NewPodcastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPodcastController.swift; sourceTree = "<group>"; };
+		FAD983062512750C00565927 /* InputPodcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPodcastView.swift; sourceTree = "<group>"; };
+		FAD983082512753300565927 /* InputPodcastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputPodcastView.xib; sourceTree = "<group>"; };
+		FAD9830C25127DE000565927 /* UploadPodcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPodcastView.swift; sourceTree = "<group>"; };
+		FAD9830E25127DEE00565927 /* UploadPodcastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadPodcastView.xib; sourceTree = "<group>"; };
+		FAD98310251284BB00565927 /* WhiteMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMainButton.swift; sourceTree = "<group>"; };
+		FAD983142512879F00565927 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
+		FAD98316251287B000565927 /* CheckboxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxView.xib; sourceTree = "<group>"; };
+		FAD98318251289E900565927 /* CheckboxPodcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxPodcastView.swift; sourceTree = "<group>"; };
+		FAD9831A251289F900565927 /* CheckboxPodcastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxPodcastView.xib; sourceTree = "<group>"; };
+		FAD9831D2512922100565927 /* SelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
+		FAD9831F2512923200565927 /* SelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorView.xib; sourceTree = "<group>"; };
+		FAD983222512986300565927 /* PodcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastView.swift; sourceTree = "<group>"; };
+		FAD983242512987E00565927 /* PodcastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastView.xib; sourceTree = "<group>"; };
+		FAF428EC25123FAC00662FD3 /* vk-podcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vk-podcast.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF428EF25123FAC00662FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAF428F325123FAC00662FD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAF428F625123FAC00662FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAF428F825123FB100662FD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAF428FB25123FB100662FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAF428FD25123FB100662FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF42905251241BF00662FD3 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		FAF429082512422600662FD3 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		FAF429092512422600662FD3 /* Extension+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
+		FAF4290A2512422600662FD3 /* Extension+NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+NavigationBar.swift"; sourceTree = "<group>"; };
+		FAF4290B2512422600662FD3 /* Extension_Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension_Storyboard.swift; sourceTree = "<group>"; };
+		FAF4290C2512422600662FD3 /* Extension+KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+KeyboardObserver.swift"; sourceTree = "<group>"; };
+		FAF4290D2512422600662FD3 /* Extension+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		FAF429172512425800662FD3 /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		FAF429182512425800662FD3 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		FAF429192512425800662FD3 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		FAF4291A2512425800662FD3 /* TT Commons DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons DemiBold.otf"; sourceTree = "<group>"; };
+		FAF4291B2512425800662FD3 /* TTCommons-DemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-DemiBold.ttf"; sourceTree = "<group>"; };
+		FAF42923251242CD00662FD3 /* MainTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTextView.xib; sourceTree = "<group>"; };
+		FAF42924251242CD00662FD3 /* MainTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTextView.swift; sourceTree = "<group>"; };
+		FAF42926251242CD00662FD3 /* MainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		FAF4292B251242CD00662FD3 /* LabelFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelFieldView.xib; sourceTree = "<group>"; };
+		FAF4292C251242CD00662FD3 /* LabelFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelFieldView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAF428E925123FAC00662FD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FE2C11F94587F883236E895 /* Pods_vk_podcast.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		533D685927B55C5F44EF7D3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DABFC66D38B78374C7C28106 /* Pods_vk_podcast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83D5BE08AB9CDDC65D70223A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C179904FF000A70731A425C9 /* Pods-vk-podcast.debug.xcconfig */,
+				5B78A0D0D7C8032AE1433CBE /* Pods-vk-podcast.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FAB2F79A2512B2D7009746DC /* EditPodcastController */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F79B2512B334009746DC /* EditPodcastController.swift */,
+			);
+			path = EditPodcastController;
+			sourceTree = "<group>";
+		};
+		FAB2F79D2512C7F4009746DC /* TimelineView */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F79E2512C80E009746DC /* TimelineView.swift */,
+				FAB2F7A02512C81E009746DC /* TimelineView.xib */,
+			);
+			path = TimelineView;
+			sourceTree = "<group>";
+		};
+		FAB2F7A42512D204009746DC /* InputTimecodeView */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F7A52512D22F009746DC /* InputTimecodeView.swift */,
+				FAB2F7A72512D23E009746DC /* InputTimecodeView.xib */,
+			);
+			path = InputTimecodeView;
+			sourceTree = "<group>";
+		};
+		FAB2F7A92512D435009746DC /* AddTimecodeView */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F7AA2512D45B009746DC /* AddTimecodeView.swift */,
+				FAB2F7AC2512D47B009746DC /* AddTimecodeView.xib */,
+			);
+			path = AddTimecodeView;
+			sourceTree = "<group>";
+		};
+		FAB2F7AE2512DDE7009746DC /* PreparePodcastController */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F7AF2512DE0D009746DC /* PreparePodcastController.swift */,
+			);
+			path = PreparePodcastController;
+			sourceTree = "<group>";
+		};
+		FAB2F7B12512E308009746DC /* TitleTextView */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F7B72512E682009746DC /* TitleTextView.swift */,
+				FAB2F7B92512E693009746DC /* TitleTextView.xib */,
+			);
+			path = TitleTextView;
+			sourceTree = "<group>";
+		};
+		FAB2F7B22512E3B2009746DC /* PreviewTexview */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F7B32512E3FA009746DC /* PreviewTitlePodcastView.swift */,
+				FAB2F7B52512E40F009746DC /* PreviewTitlePodcastView.xib */,
+			);
+			path = PreviewTexview;
+			sourceTree = "<group>";
+		};
+		FAB2F7BB2512E978009746DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F7BC2512E998009746DC /* Podcast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAB2F7BE2512EB38009746DC /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F7BF2512EB55009746DC /* MainTextField.swift */,
+				FAB2F7C12512EB68009746DC /* MainTextField.xib */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		FAD982FD2512669F00565927 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FAD982FF251266BA00565927 /* Constants.swift */,
+				FAD982FE251266BA00565927 /* Pallete.swift */,
+				FAB2F7C525130D5D009746DC /* vk-podcast-Bridging-Header.h */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		FAD983022512697500565927 /* NewPodcastController */ = {
+			isa = PBXGroup;
+			children = (
+				FAD9830325126A0000565927 /* NewPodcastController.swift */,
+				FAD983052512749100565927 /* subviews */,
+			);
+			path = NewPodcastController;
+			sourceTree = "<group>";
+		};
+		FAD983052512749100565927 /* subviews */ = {
+			isa = PBXGroup;
+			children = (
+				FAD983212512983800565927 /* PodcastView */,
+				FAD983122512874600565927 /* CheckboxPodcastView */,
+				FAD9830B25127D8D00565927 /* UploadPodcastView */,
+				FAD9830A25127D6900565927 /* InputPodcastView */,
+			);
+			path = subviews;
+			sourceTree = "<group>";
+		};
+		FAD9830A25127D6900565927 /* InputPodcastView */ = {
+			isa = PBXGroup;
+			children = (
+				FAD983062512750C00565927 /* InputPodcastView.swift */,
+				FAD983082512753300565927 /* InputPodcastView.xib */,
+			);
+			path = InputPodcastView;
+			sourceTree = "<group>";
+		};
+		FAD9830B25127D8D00565927 /* UploadPodcastView */ = {
+			isa = PBXGroup;
+			children = (
+				FAD9830C25127DE000565927 /* UploadPodcastView.swift */,
+				FAD9830E25127DEE00565927 /* UploadPodcastView.xib */,
+			);
+			path = UploadPodcastView;
+			sourceTree = "<group>";
+		};
+		FAD983122512874600565927 /* CheckboxPodcastView */ = {
+			isa = PBXGroup;
+			children = (
+				FAD98318251289E900565927 /* CheckboxPodcastView.swift */,
+				FAD9831A251289F900565927 /* CheckboxPodcastView.xib */,
+			);
+			path = CheckboxPodcastView;
+			sourceTree = "<group>";
+		};
+		FAD983132512878500565927 /* CheckboxView */ = {
+			isa = PBXGroup;
+			children = (
+				FAD983142512879F00565927 /* CheckboxView.swift */,
+				FAD98316251287B000565927 /* CheckboxView.xib */,
+			);
+			path = CheckboxView;
+			sourceTree = "<group>";
+		};
+		FAD9831C2512920600565927 /* SelectorView */ = {
+			isa = PBXGroup;
+			children = (
+				FAD9831D2512922100565927 /* SelectorView.swift */,
+				FAD9831F2512923200565927 /* SelectorView.xib */,
+			);
+			path = SelectorView;
+			sourceTree = "<group>";
+		};
+		FAD983212512983800565927 /* PodcastView */ = {
+			isa = PBXGroup;
+			children = (
+				FAD983222512986300565927 /* PodcastView.swift */,
+				FAD983242512987E00565927 /* PodcastView.xib */,
+			);
+			path = PodcastView;
+			sourceTree = "<group>";
+		};
+		FAF428E325123FAC00662FD3 = {
+			isa = PBXGroup;
+			children = (
+				FAF428EE25123FAC00662FD3 /* vk-podcast */,
+				FAF428ED25123FAC00662FD3 /* Products */,
+				83D5BE08AB9CDDC65D70223A /* Pods */,
+				533D685927B55C5F44EF7D3E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAF428ED25123FAC00662FD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAF428EC25123FAC00662FD3 /* vk-podcast.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAF428EE25123FAC00662FD3 /* vk-podcast */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F7BB2512E978009746DC /* Models */,
+				FAD982FD2512669F00565927 /* Support */,
+				FAF429032512416600662FD3 /* Storyboard */,
+				FAF429072512422600662FD3 /* Extensions */,
+				FAF429142512425800662FD3 /* Resources */,
+				FAF42921251242CD00662FD3 /* Components */,
+				FAF428EF25123FAC00662FD3 /* AppDelegate.swift */,
+				FAF428F325123FAC00662FD3 /* ViewController.swift */,
+				FAF428F525123FAC00662FD3 /* Main.storyboard */,
+				FAF428F825123FB100662FD3 /* Assets.xcassets */,
+				FAF428FA25123FB100662FD3 /* LaunchScreen.storyboard */,
+				FAF428FD25123FB100662FD3 /* Info.plist */,
+			);
+			path = "vk-podcast";
+			sourceTree = "<group>";
+		};
+		FAF429032512416600662FD3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F7AE2512DDE7009746DC /* PreparePodcastController */,
+				FAB2F79A2512B2D7009746DC /* EditPodcastController */,
+				FAD983022512697500565927 /* NewPodcastController */,
+				FAF429042512417C00662FD3 /* MainController */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FAF429042512417C00662FD3 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				FAF42905251241BF00662FD3 /* MainController.swift */,
+			);
+			path = MainController;
+			sourceTree = "<group>";
+		};
+		FAF429072512422600662FD3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAF429082512422600662FD3 /* Extension+UIViewController.swift */,
+				FAF429092512422600662FD3 /* Extension+Font.swift */,
+				FAF4290A2512422600662FD3 /* Extension+NavigationBar.swift */,
+				FAF4290B2512422600662FD3 /* Extension_Storyboard.swift */,
+				FAF4290C2512422600662FD3 /* Extension+KeyboardObserver.swift */,
+				FAF4290D2512422600662FD3 /* Extension+UIView.swift */,
+				FAB2F7C32512F9E0009746DC /* Extension+Int.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAF429142512425800662FD3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAF429152512425800662FD3 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FAF429152512425800662FD3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FAF429162512425800662FD3 /* SFPro */,
+				FAF4291A2512425800662FD3 /* TT Commons DemiBold.otf */,
+				FAF4291B2512425800662FD3 /* TTCommons-DemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FAF429162512425800662FD3 /* SFPro */ = {
+			isa = PBXGroup;
+			children = (
+				FAF429172512425800662FD3 /* SFProDisplay-Medium.ttf */,
+				FAF429182512425800662FD3 /* SFProDisplay-Regular.ttf */,
+				FAF429192512425800662FD3 /* SFProDisplay-Semibold.ttf */,
+			);
+			path = SFPro;
+			sourceTree = "<group>";
+		};
+		FAF42921251242CD00662FD3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F7BE2512EB38009746DC /* TextField */,
+				FAB2F7B22512E3B2009746DC /* PreviewTexview */,
+				FAB2F7B12512E308009746DC /* TitleTextView */,
+				FAB2F7A92512D435009746DC /* AddTimecodeView */,
+				FAB2F7A42512D204009746DC /* InputTimecodeView */,
+				FAB2F79D2512C7F4009746DC /* TimelineView */,
+				FAD9831C2512920600565927 /* SelectorView */,
+				FAD983132512878500565927 /* CheckboxView */,
+				FAF42922251242CD00662FD3 /* TextView */,
+				FAF42925251242CD00662FD3 /* Buttons */,
+				FAF4292A251242CD00662FD3 /* LabelView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FAF42922251242CD00662FD3 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				FAF42923251242CD00662FD3 /* MainTextView.xib */,
+				FAF42924251242CD00662FD3 /* MainTextView.swift */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		FAF42925251242CD00662FD3 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				FAF42926251242CD00662FD3 /* MainButton.swift */,
+				FAB2F7A22512C9E5009746DC /* EditControlButton.swift */,
+				FAD98310251284BB00565927 /* WhiteMainButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		FAF4292A251242CD00662FD3 /* LabelView */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4292B251242CD00662FD3 /* LabelFieldView.xib */,
+				FAF4292C251242CD00662FD3 /* LabelFieldView.swift */,
+			);
+			path = LabelView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAF428EB25123FAC00662FD3 /* vk-podcast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF4290025123FB100662FD3 /* Build configuration list for PBXNativeTarget "vk-podcast" */;
+			buildPhases = (
+				C7E242F562E042532FDCC5A6 /* [CP] Check Pods Manifest.lock */,
+				FAF428E825123FAC00662FD3 /* Sources */,
+				FAF428E925123FAC00662FD3 /* Frameworks */,
+				FAF428EA25123FAC00662FD3 /* Resources */,
+				4EF55CB16EEF3330DBA7BDEE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "vk-podcast";
+			productName = "vk-podcast";
+			productReference = FAF428EC25123FAC00662FD3 /* vk-podcast.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAF428E425123FAC00662FD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = AlexBugatti;
+				TargetAttributes = {
+					FAF428EB25123FAC00662FD3 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = FAF428E725123FAC00662FD3 /* Build configuration list for PBXProject "vk-podcast" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAF428E325123FAC00662FD3;
+			productRefGroup = FAF428ED25123FAC00662FD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAF428EB25123FAC00662FD3 /* vk-podcast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAF428EA25123FAC00662FD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF428FC25123FB100662FD3 /* LaunchScreen.storyboard in Resources */,
+				FAB2F7A82512D23E009746DC /* InputTimecodeView.xib in Resources */,
+				FAD983202512923200565927 /* SelectorView.xib in Resources */,
+				FAF42930251242CD00662FD3 /* MainTextView.xib in Resources */,
+				FAF4291E2512425800662FD3 /* SFProDisplay-Semibold.ttf in Resources */,
+				FAF42935251242CD00662FD3 /* LabelFieldView.xib in Resources */,
+				FAB2F7C22512EB68009746DC /* MainTextField.xib in Resources */,
+				FAF4291C2512425800662FD3 /* SFProDisplay-Medium.ttf in Resources */,
+				FAF429202512425800662FD3 /* TTCommons-DemiBold.ttf in Resources */,
+				FAD983092512753300565927 /* InputPodcastView.xib in Resources */,
+				FAB2F7B62512E40F009746DC /* PreviewTitlePodcastView.xib in Resources */,
+				FAD98317251287B000565927 /* CheckboxView.xib in Resources */,
+				FAD983252512987E00565927 /* PodcastView.xib in Resources */,
+				FAF428F925123FB100662FD3 /* Assets.xcassets in Resources */,
+				FAD9830F25127DEE00565927 /* UploadPodcastView.xib in Resources */,
+				FAD9831B251289F900565927 /* CheckboxPodcastView.xib in Resources */,
+				FAF4291D2512425800662FD3 /* SFProDisplay-Regular.ttf in Resources */,
+				FAB2F7BA2512E693009746DC /* TitleTextView.xib in Resources */,
+				FAB2F7AD2512D47C009746DC /* AddTimecodeView.xib in Resources */,
+				FAF4291F2512425800662FD3 /* TT Commons DemiBold.otf in Resources */,
+				FAF428F725123FAC00662FD3 /* Main.storyboard in Resources */,
+				FAB2F7A12512C81E009746DC /* TimelineView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EF55CB16EEF3330DBA7BDEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vk-podcast/Pods-vk-podcast-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vk-podcast/Pods-vk-podcast-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-vk-podcast/Pods-vk-podcast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7E242F562E042532FDCC5A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vk-podcast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAF428E825123FAC00662FD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD98319251289E900565927 /* CheckboxPodcastView.swift in Sources */,
+				FAF429122512422600662FD3 /* Extension+KeyboardObserver.swift in Sources */,
+				FAB2F7B82512E682009746DC /* TitleTextView.swift in Sources */,
+				FAF4290F2512422600662FD3 /* Extension+Font.swift in Sources */,
+				FAD983232512986300565927 /* PodcastView.swift in Sources */,
+				FAF4290E2512422600662FD3 /* Extension+UIViewController.swift in Sources */,
+				FAB2F7AB2512D45B009746DC /* AddTimecodeView.swift in Sources */,
+				FAD9830D25127DE000565927 /* UploadPodcastView.swift in Sources */,
+				FAF428F425123FAC00662FD3 /* ViewController.swift in Sources */,
+				FAB2F79F2512C80E009746DC /* TimelineView.swift in Sources */,
+				FAF429102512422600662FD3 /* Extension+NavigationBar.swift in Sources */,
+				FAB2F7C42512F9E0009746DC /* Extension+Int.swift in Sources */,
+				FAF42936251242CD00662FD3 /* LabelFieldView.swift in Sources */,
+				FAD9831E2512922100565927 /* SelectorView.swift in Sources */,
+				FAF42906251241BF00662FD3 /* MainController.swift in Sources */,
+				FAB2F7A32512C9E5009746DC /* EditControlButton.swift in Sources */,
+				FAF42931251242CD00662FD3 /* MainTextView.swift in Sources */,
+				FAF42932251242CD00662FD3 /* MainButton.swift in Sources */,
+				FAB2F7A62512D22F009746DC /* InputTimecodeView.swift in Sources */,
+				FAF429112512422600662FD3 /* Extension_Storyboard.swift in Sources */,
+				FAB2F7BD2512E999009746DC /* Podcast.swift in Sources */,
+				FAD983072512750C00565927 /* InputPodcastView.swift in Sources */,
+				FAF428F025123FAC00662FD3 /* AppDelegate.swift in Sources */,
+				FAD98301251266BA00565927 /* Constants.swift in Sources */,
+				FAD98311251284BB00565927 /* WhiteMainButton.swift in Sources */,
+				FAB2F79C2512B334009746DC /* EditPodcastController.swift in Sources */,
+				FAD98300251266BA00565927 /* Pallete.swift in Sources */,
+				FAD983152512879F00565927 /* CheckboxView.swift in Sources */,
+				FAD9830425126A0100565927 /* NewPodcastController.swift in Sources */,
+				FAB2F7C02512EB56009746DC /* MainTextField.swift in Sources */,
+				FAB2F7B42512E3FA009746DC /* PreviewTitlePodcastView.swift in Sources */,
+				FAB2F7B02512DE0D009746DC /* PreparePodcastController.swift in Sources */,
+				FAF429132512422600662FD3 /* Extension+UIView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAF428F525123FAC00662FD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF428F625123FAC00662FD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAF428FA25123FB100662FD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF428FB25123FB100662FD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAF428FE25123FB100662FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAF428FF25123FB100662FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAF4290125123FB100662FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C179904FF000A70731A425C9 /* Pods-vk-podcast.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "vk-podcast/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abugaev.vk-podcast";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "vk-podcast/Support/vk-podcast-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAF4290225123FB100662FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B78A0D0D7C8032AE1433CBE /* Pods-vk-podcast.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "vk-podcast/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abugaev.vk-podcast";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "vk-podcast/Support/vk-podcast-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAF428E725123FAC00662FD3 /* Build configuration list for PBXProject "vk-podcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF428FE25123FB100662FD3 /* Debug */,
+				FAF428FF25123FB100662FD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF4290025123FB100662FD3 /* Build configuration list for PBXNativeTarget "vk-podcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF4290125123FB100662FD3 /* Debug */,
+				FAF4290225123FB100662FD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAF428E425123FAC00662FD3 /* Project object */;
+}

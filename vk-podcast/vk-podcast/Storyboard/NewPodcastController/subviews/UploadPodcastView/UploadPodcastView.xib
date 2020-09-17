@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SFProDisplay-Semibold.ttf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UploadPodcastView" customModule="vk_podcast" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="196"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Загрузите ваш подкаст" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrg-Q9-uAv">
+                    <rect key="frame" x="32" y="32" width="350" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите готовый аудиофайл из вашего телефона и добавьте его" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-Ux-UKZ">
+                    <rect key="frame" x="32" y="64" width="350" height="40"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                    <color key="textColor" red="0.42711046339999997" green="0.46898007390000002" blue="0.52202397580000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-oH-r2X" customClass="WhiteMainButton" customModule="vk_podcast" customModuleProvider="target">
+                    <rect key="frame" x="133" y="124" width="148" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="148" id="H7L-IL-ALY"/>
+                        <constraint firstAttribute="height" constant="36" id="UVr-Qa-qIu"/>
+                    </constraints>
+                    <state key="normal" title="Загрузить файл"/>
+                    <connections>
+                        <action selector="didActionTapped:" destination="-1" eventType="touchUpInside" id="tzy-dr-uft"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Fhh-oH-r2X" secondAttribute="bottom" constant="36" id="8F8-ks-dcY"/>
+                <constraint firstItem="Nrg-Q9-uAv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="Aj2-bK-EzT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cXg-Ux-UKZ" secondAttribute="trailing" constant="32" id="IPL-EM-dQT"/>
+                <constraint firstItem="Fhh-oH-r2X" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KHT-cN-L78"/>
+                <constraint firstItem="cXg-Ux-UKZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="Ol7-mS-Aoa"/>
+                <constraint firstItem="Nrg-Q9-uAv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="e5v-Rk-g4L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Nrg-Q9-uAv" secondAttribute="trailing" constant="32" id="g9F-FV-aMD"/>
+                <constraint firstItem="Fhh-oH-r2X" firstAttribute="top" secondItem="cXg-Ux-UKZ" secondAttribute="bottom" constant="20" id="uJd-Ws-tCP"/>
+                <constraint firstItem="cXg-Ux-UKZ" firstAttribute="top" secondItem="Nrg-Q9-uAv" secondAttribute="bottom" constant="8" id="zBu-H4-yOQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="105.79710144927537" y="255.13392857142856"/>
+        </view>
+    </objects>
+</document>

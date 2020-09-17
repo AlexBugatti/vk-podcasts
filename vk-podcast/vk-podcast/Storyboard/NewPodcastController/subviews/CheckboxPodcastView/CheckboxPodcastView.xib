@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckboxPodcastView" customModule="vk_podcast" customModuleProvider="target">
+            <connections>
+                <outlet property="stackView" destination="Tzc-1J-07H" id="xve-sw-mWJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="449"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Tzc-1J-07H">
+                    <rect key="frame" x="0.0" y="0.0" width="345" height="449"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Tzc-1J-07H" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="HvC-S4-GtE"/>
+                <constraint firstItem="Tzc-1J-07H" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="mS7-Jr-bkU"/>
+                <constraint firstItem="Tzc-1J-07H" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wMg-fl-XzB"/>
+                <constraint firstItem="Tzc-1J-07H" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="weB-Lq-8yb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="87.681159420289859" y="-65.959821428571431"/>
+        </view>
+    </objects>
+</document>

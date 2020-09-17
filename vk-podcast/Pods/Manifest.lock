@@ -1,0 +1,16 @@
+PODS:
+  - SCWaveformView (2.0.6)
+
+DEPENDENCIES:
+  - SCWaveformView
+
+SPEC REPOS:
+  trunk:
+    - SCWaveformView
+
+SPEC CHECKSUMS:
+  SCWaveformView: 78b3503675aafcdaf9c283d68cb45c9fc735af87
+
+PODFILE CHECKSUM: 725dda6096cdd2ad9a889c350c8c3a913ef6316f
+
+COCOAPODS: 1.9.1

@@ -1,0 +1,6 @@
+framework module Pods_vk_podcast {
+  umbrella header "Pods-vk-podcast-umbrella.h"
+
+  export *
+  module * { export * }
+}
